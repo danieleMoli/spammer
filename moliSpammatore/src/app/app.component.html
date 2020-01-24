@@ -1,0 +1,18 @@
+<div class="container">
+<form class="jumbotron">
+<label>Cose inutili</label>
+<input type="text" name="inutile" #new_inutile>
+<label>Numero</label>
+<input type="number" name="numero" #new_number>
+
+<button class="btn btn-primary" (click)="onClick( new_inutile , new_number )">schiacciami</button> <!--guarda bene spazi in questa riga -->
+
+
+<ul>
+<li *ngFor="let frase of articles">
+<app-frase [frase]="frase"></app-frase>
+</li>
+</ul>
+
+</form>
+</div>
